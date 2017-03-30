@@ -1,0 +1,40 @@
+<div class="parentContainer">
+    <div class="container skin-object-list">
+        <div *ngIf="skinExpos">
+            <ul class="skin-result">
+                <li><b>Results</b></li>
+                <li *ngFor="let skinExpo of skinExpos" (click)="onSelect(skinExpo)" [class.selected]="skinExpo === selectedExpo">
+                    <span>{{skinExpo.title}} {{skinExpo.location}}</span>
+                    <ul>
+                        <li *ngFor="let expoObject of skinExpo.expoObjects">
+                            <span>{{expoObject.order}}</span>
+                            <span>{{expoObject.skinObject?.inventoryNumber}}</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div  *ngIf="selectedExpo" class="container skin-object-details">
+        <h2>
+            {{this.selectedExpo.title}} {{this.selectedExpo.location | uppercase}}
+        </h2>
+        <div class="skinObject">
+            <p>
+                <span class="badge">Titre</span>
+                <span>{{this.selectedExpo.title}} </span>
+                <input *ngIf="rolesWriter" [(ngModel)]="this.selectedExpo.title" placeholder="Titre">
+            </p>
+            <p>
+                <span class="badge">Lieu</span>
+                <span>{{this.selectedExpo.location}}</span>
+                <input *ngIf="rolesWriter" [(ngModel)]="this.selectedExpo.location" placeholder="Lieu">
+            </p>
+            <div>
+                <button *ngIf="rolesWriter" (click)="save(this.selectedExpo)">save</button>
+            </div>
+        </div>
+    </div>
+
+</div>

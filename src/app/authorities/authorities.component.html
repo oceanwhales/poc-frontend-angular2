@@ -1,0 +1,35 @@
+<div class="parentContainer">
+    <div class="container skin-object-list">
+        <div *ngIf="skinAuthorities">
+            <ul class="skin-result">
+                <li><b>Results</b></li>
+                <li *ngFor="let skinAuthority of skinAuthorities" (click)="onSelect(skinAuthority)"
+                    [class.selected]="skinAuthority === selectedAuthority">
+                    <span>{{skinAuthority.firstName}} {{skinAuthority.lastName}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="selectedAuthority" class="container skin-object-details">
+        <h2>
+            {{this.selectedAuthority.firstName }} {{this.selectedAuthority.lastName | uppercase}}
+        </h2>
+        <div class="skinObject">
+            <p>
+                <span class="badge">Prénom</span>
+                <span>{{this.selectedAuthority.firstName}} </span>
+                <input *ngIf="rolesWriter" [(ngModel)]="this.selectedAuthority.firstName" placeholder="Prénom">
+            </p>
+            <p>
+                <span class="badge">Nom</span>
+                <span>{{this.selectedAuthority.lastName}}</span>
+                <input *ngIf="rolesWriter" [(ngModel)]="this.selectedAuthority.lastName" placeholder="Nom">
+            </p>
+            <div>
+                <button *ngIf="rolesWriter" (click)="save(this.selectedAuthority)">save</button>
+            </div>
+        </div>
+    </div>
+
+</div>

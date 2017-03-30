@@ -1,0 +1,36 @@
+<div class="parentContainer">
+    <div class="container skin-object-list">
+        <div *ngIf="skinObjects">
+            <ul class="skin-result">
+                <li><b>Results</b></li>
+                <li *ngFor="let skinObject of skinObjects" (click)="onSelect(skinObject)"
+                    [class.selected]="skinObject === selectedObject">
+                    <span>{{skinObject.titles}} </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="selectedObject" class="container skin-object-details">
+        <h2>
+            {{this.selectedObject.titles[0] | uppercase}} is my object {{this.selectedObject.id}}
+        </h2>
+        <div class="skinObject">
+            <p>
+                <span class="badge">Titles</span>
+                <span>{{this.selectedObject.titles}} </span>
+                <input *ngIf="rolesWriter" [(ngModel)]="this.selectedObject.titles" placeholder="name">
+            </p>
+            <p>
+                <span class="badge">Author</span>
+                <span>{{this.selectedObject.authority.firstName}} {{this.selectedObject.authority.lastName}}</span>
+                <input  *ngIf="rolesWriter" [(ngModel)]="this.selectedObject.authority.firstName" placeholder="name">
+                <button *ngIf="rolesWriter" class="rightButton" (click)="delete(this.selectedObject)"><md-icon class="md-24">delete</md-icon></button>
+            </p>
+            <div>
+                <button *ngIf="rolesWriter" (click)="save(this.selectedObject)">save</button>
+            </div>
+        </div>
+        <!--<button (click)="gotoDetail()">View Details</button>-->
+    </div>
+</div>

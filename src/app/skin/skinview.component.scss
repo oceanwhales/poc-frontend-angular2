@@ -1,0 +1,107 @@
+ul{
+  list-style:none;
+}
+
+.parentContainer {
+  padding: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+  width: 95%;
+  background-color: #EEE;
+  display: flex;
+}
+
+.skin-object-list {
+  flex: 0 0 30%;
+}
+.skin-object-details {
+  background-color: rgba(199, 220, 220, 0.38);
+  flex: 1;
+  border-radius: 4px;
+}
+
+.skin-object-details p {
+  background-color: #DDD;
+  color: black;
+}
+
+
+.skin-result li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.skin-result li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.skinObject li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+
+
+.skinObject p {
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.skinObject .badge  {
+  display: inline-block;
+  float: left;
+  font-size: small;
+  color: white;
+  padding: 0.5em 0.7em 0 0.5em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  // align with container
+  left: -1px;
+  top: -4px;
+  height: 2em;
+  width: 60px;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.skinObject input  {
+  display: inline-block;
+  float: right;
+  font-size: small;
+  padding: 0.5em 0.7em 0 0.5em;
+  background-color: #EEE;
+  line-height: 1em;
+  position: relative;
+  // align with container
+  left: -1px;
+  top: -5px;
+  height: 2em;
+  border-radius: 4px 0 0 4px;
+  border-top: none;
+}
+
+button.rightButton {
+    display: inline-block;
+    background-color: transparent;
+    float: right;
+    line-height: 1em;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: none;
+    // align with container
+    left: -1px;
+    top: -5px;
+    height: 2em
+}
