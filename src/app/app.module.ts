@@ -17,6 +17,7 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { AuthGuard } from './guards';
 import { RoleGuard } from './guards';
 import { AuthoritiesComponent } from './authorities/authorities.component';
+import { NgSemanticModule } from "ng-semantic";
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
@@ -27,6 +28,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     FormsModule,
     routing,
 
+    NgSemanticModule,
     MaterialModule.forRoot()
   ],
   declarations: [
