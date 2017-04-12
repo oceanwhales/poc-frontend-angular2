@@ -19,7 +19,6 @@ import { RoleGuard } from './guards';
 import { AuthoritiesComponent } from './authorities/authorities.component';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
-import {InputTextModule, CarouselModule, MenubarModule} from 'primeng/primeng';
 
 @NgModule({
   imports: [
@@ -27,9 +26,7 @@ import {InputTextModule, CarouselModule, MenubarModule} from 'primeng/primeng';
     HttpModule,
     FormsModule,
     routing,
-    
-    InputTextModule,
-    CarouselModule, MenubarModule,
+
     MaterialModule.forRoot()
   ],
   declarations: [

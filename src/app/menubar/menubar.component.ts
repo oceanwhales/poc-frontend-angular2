@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenubarModule, MenuItem } from 'primeng/primeng';
 
 @Component({
     selector: 'my-menubar',
@@ -9,7 +8,7 @@ import { MenubarModule, MenuItem } from 'primeng/primeng';
 })
 
 export class MenubarComponent implements OnInit {
-    private items: MenuItem[];
+    private items = [];
 
     constructor(private router: Router) {
 

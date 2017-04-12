@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CarouselModule } from 'primeng/primeng';
 
 import { AuthenticationService, ApiService } from '../services/index';
 
@@ -23,8 +22,6 @@ export class LoginComponent implements OnInit {
         private authenticationService: AuthenticationService,
         private apiService: ApiService
       ) {
-        this.loginCarouselImages = [ '/img/snb-1.jpeg', '/img/snb-2.jpeg', '/img/snb-3.jpeg' ];
-        // this.loginCarouselImages = [ '/img/cuba_plage1.jpeg', '/img/cuba_plage2.jpeg' ];
       }
 
     ngOnInit() {
