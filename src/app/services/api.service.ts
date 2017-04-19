@@ -8,7 +8,7 @@ import {SkinExpo} from '../models/SkinExpo';
 
 @Injectable()
 export class ApiService {
-    private restApiEndpoint: string = 'http://localhost:9001';
+    private restApiEndpoint = 'http://localhost:9001';
     private http: Http;
     private readerHeaders: Headers = new Headers();
     private writerHeaders: Headers = new Headers();
