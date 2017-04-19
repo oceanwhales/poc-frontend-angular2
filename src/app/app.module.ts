@@ -10,7 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { SkinViewComponent} from './skin/skinview.component';
 import { ApiService, AuthenticationService } from './services';
 import { routing } from './app.routing';
-import { MaterialModule } from '@angular/material';
+// import { MaterialModule } from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { MenubarComponent } from './menubar/menubar.component';
@@ -29,7 +29,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     routing,
 
     NgSemanticModule,
-    MaterialModule.forRoot()
+    // MaterialModule.forRoot()
   ],
   declarations: [
     AppComponent,

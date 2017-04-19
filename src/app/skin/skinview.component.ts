@@ -15,7 +15,7 @@ export class SkinViewComponent implements OnInit {
 
     constructor(private api: ApiService) {
         this.skinObjects = [];
-        this.rolesWriter = localStorage.getItem('userRoles').includes('ROLE_WRITE');
+        this.rolesWriter = localStorage.getItem('userRoles').indexOf('ROLE_WRITE') >= 0;
     }
 
     ngOnInit() {

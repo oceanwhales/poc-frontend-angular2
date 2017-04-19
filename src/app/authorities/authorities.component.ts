@@ -14,7 +14,7 @@ export class AuthoritiesComponent implements OnInit {
 
     constructor(private api: ApiService) {
         this.skinAuthorities = new Array<SkinAuthority>();
-        this.rolesWriter = localStorage.getItem('userRoles').includes('ROLE_WRITE');
+        this.rolesWriter = localStorage.getItem('userRoles').indexOf('ROLE_WRITE') >= 0;
         if(this.rolesWriter){
             this.selectedAuthority = new SkinAuthority();
         }

@@ -14,7 +14,7 @@ export class ExposComponent implements OnInit {
 
     constructor(private api: ApiService) {
         this.skinExpos = new Array<SkinExpo>();
-        this.rolesWriter = localStorage.getItem('userRoles').includes('ROLE_WRITE');
+        this.rolesWriter = localStorage.getItem('userRoles').indexOf('ROLE_WRITE') >= 0;
         if(this.rolesWriter){
             this.selectedExpo = new SkinExpo();
         }
