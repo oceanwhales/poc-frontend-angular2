@@ -20,8 +20,8 @@ export class MenubarComponent implements OnInit {
             {
                 label: 'Accueil',
                 items: [{
-                        label: 'New', 
-                        icon: 'fa-plus',
+                        label: 'New',
+                        icon: 'fa-plus',    
                         items: [
                             {label: 'Project'},
                             {label: 'Other'},

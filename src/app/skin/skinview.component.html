@@ -25,7 +25,7 @@
                 <span class="badge">Author</span>
                 <span>{{this.selectedObject.authority.firstName}} {{this.selectedObject.authority.lastName}}</span>
                 <input  *ngIf="rolesWriter" [(ngModel)]="this.selectedObject.authority.firstName" placeholder="name">
-                <button *ngIf="rolesWriter" class="rightButton" (click)="delete(this.selectedObject)"><md-icon class="md-24">delete</md-icon></button>
+                <button *ngIf="rolesWriter" class="rightButton" (click)="delete(this.selectedObject)">delete</button>
             </p>
             <div>
                 <button *ngIf="rolesWriter" (click)="save(this.selectedObject)">save</button>
