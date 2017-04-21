@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 
 @Component({
     selector: 'my-menubar',
@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class MenubarComponent implements OnInit {
     private items = [];
 
-    constructor(private router: Router) {
+    // constructor(private router: Router) {
+    constructor() {
 
     }
 

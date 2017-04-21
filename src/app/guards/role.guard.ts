@@ -7,6 +7,7 @@ export class RoleGuard implements CanActivate {
     constructor(private router: Router) { }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        console.log(route);
         console.log('PASS IN GUARD ROLE');
         if (localStorage.getItem('userRoles')) {
             // logged in so return true

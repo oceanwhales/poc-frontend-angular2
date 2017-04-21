@@ -7,7 +7,7 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { SkinViewComponent } from './skin/skinview.component';
 import { LoginComponent } from './login/login.component';
 import { AuthoritiesComponent } from './authorities/authorities.component';
-import { AuthGuard } from './guards';
+// import { AuthGuard } from './guards';
 import { RoleGuard } from './guards';
 
 const routes: Routes = [

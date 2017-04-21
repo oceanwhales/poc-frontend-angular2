@@ -23,6 +23,7 @@ export class AuthenticationService {
     }
 
     private handleError(error: Response | any) {
+        console.log(error);
         return Observable.from('true');
     }
     logout() {
