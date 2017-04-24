@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { MenuComponent } from './menu/menu.component';
+// import { MenuComponent } from './menu/menu.component';
 import { ExposComponent } from './expos/expos.component';
 import { AboutComponent } from './about/about.component';
 import { MenubarComponent } from './menubar/menubar.component';
@@ -12,7 +12,7 @@ import { RoleGuard } from './guards';
 
 const routes: Routes = [
   // { path: '', component: MenuComponent, canActivate: [AuthGuard]},
-  { path: '', component: MenuComponent},
+  { path: '', component: SkinViewComponent},
   { path: 'about', component: AboutComponent},
   { path: 'menubar', component: MenubarComponent},
   // { path: 'skin-view', component: SkinViewComponent, canActivate: [RoleGuard,AuthGuard]},

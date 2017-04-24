@@ -16,29 +16,6 @@ export class MenubarComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.items = [
-            {
-                label: 'Accueil',
-                items: [{
-                        label: 'New',
-                        icon: 'fa-plus',    
-                        items: [
-                            {label: 'Project'},
-                            {label: 'Other'},
-                        ]
-                    },
-                    {label: 'Open'},
-                    {label: 'Quit'}
-                ]
-            },
-            {
-                label: 'Edit',
-                icon: 'fa-edit',
-                items: [
-                    {label: 'Undo', icon: 'fa-mail-forward'},
-                    {label: 'Redo', icon: 'fa-mail-reply'}
-                ]
-            }
-        ];
+        this.items = [];
     }
 }
